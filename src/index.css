@@ -2,14 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
 body {
-  margin: 0;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 50px;
 }
 
 *:focus {
   outline: none;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.text-custom-pink {
+  color: #ea4c89;
+}
+
+.bg-custom-pink {
+  background-color: #ea4c89;
 }
