@@ -1,6 +1,6 @@
 
 import Svg from '../Svg/Svg';
-import FooterCategory from '../MenuList/MenuList';
+import MenuList from '../MenuList/MenuList';
 import {ball, twitter, facebook, instagram, pinterest, dribbble} from '../svgDimensions';
 
 const Footer = (props) => {
@@ -33,17 +33,17 @@ const Footer = (props) => {
                     </ul>
                 </div>
                 <div className=' grid grid-cols-2 md:flex md:flex-wrap md:flex-row justify-between flex-1 lg:flex-nowrap lg:gap-10 lg:flex-none'>
-                    <FooterCategory title={"For designers"} links={["Go pro!", "Explore design work", "Design blog", "Overtime podcasts", "Dribbble meetups", "Playoffs", "Code of"]}/>
+                    <MenuList title={"For designers"} links={["Go pro!", "Explore design work", "Design blog", "Overtime podcasts", "Dribbble meetups", "Playoffs", "Code of"]}/>
                     <div>
-                        <FooterCategory title={"Hire designers"} links={["Post a job opening", "Post a freelance project", "Search for designers"]}/>
-                        <FooterCategory title={"Brands"} links={["Advertise with us"]}/>
+                        <MenuList title={"Hire designers"} links={["Post a job opening", "Post a freelance project", "Search for designers"]}/>
+                        <MenuList title={"Brands"} links={["Advertise with us"]}/>
                     </div>
-                    <FooterCategory title={"Company"} links={["About", "Career", "Support", "Media kit", "Testimonials", "API", "Terms of service", "Privacy policy"]}/>
+                    <MenuList title={"Company"} links={["About", "Career", "Support", "Media kit", "Testimonials", "API", "Terms of service", "Privacy policy"]}/>
                     <div>
-                        <FooterCategory title={"Directories"} links={["Design jobs", "Designers for hire", "Freelance designers for hire", "Tags", "Places"]}/>
-                        <FooterCategory title={"Design assets"} links={["Creative Market", "Fontspring", "Font Squirrel"]}/>
+                        <MenuList title={"Directories"} links={["Design jobs", "Designers for hire", "Freelance designers for hire", "Tags", "Places"]}/>
+                        <MenuList title={"Design assets"} links={["Creative Market", "Fontspring", "Font Squirrel"]}/>
                     </div>
-                    <FooterCategory title={"Design Resources"} links={["Freelancing", "Design Hiring", "Design Portfolio", "Design Education", "Creative Process", "Design Industry Trends"]}/>
+                    <MenuList title={"Design Resources"} links={["Freelancing", "Design Hiring", "Design Portfolio", "Design Education", "Creative Process", "Design Industry Trends"]}/>
                     
                 </div>
             </div>

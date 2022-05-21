@@ -1,4 +1,3 @@
-
 const Svg = (props) => {
   return (
     <div>
@@ -26,9 +25,10 @@ const Svg = (props) => {
         )}
 
         {props.drawingPath &&
-          props.drawingPath.map((d) => {
+          props.drawingPath.map((d, i) => {
             return (
               <path
+                key={i}
                 className={props.pathClassNames}
                 fillRule="evenodd"
                 clipRule="evenodd"

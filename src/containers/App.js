@@ -1,41 +1,15 @@
-import React, { Component } from "react";
+
 import Navigation from "../components/Navigation/Navigation";
 import Header from "../components/Header/Header";
 import Button from "../components/Button/Button";
 import Footer from "../components/Footer/Footer";
-import DropDownMenu from "../components/DropDownMenu/DropDownMenu";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      menuItemHover: false,
-      popupMenu: "",
-    };
-  }
-
-  handleDisplayPopup = (e) => {
-    this.setState({ menuItemHover: true });
-    this.setState({ popupMenu: e.target.textContent });
-  };
-
-  handleCollapsePopup = (e) => {
-    this.setState({ menuItemHover: true });
-  };
-
-  render() {
+const App = (props) => {
     return (
       <main>
         <div>
-          <Navigation
-            handleDisplayPopup={this.handleDisplayPopup.bind(this)}
-            handleCollapsePopup={this.handleCollapsePopup.bind(this)}
-          />
-          
-          {this.state.menuItemHover && (
-            <DropDownMenu heading={this.state.popupMenu} />
-          )}
+          <Navigation />
 
           <Header />
 
@@ -50,7 +24,6 @@ class App extends Component {
         </div>
       </main>
     );
-  }
 }
 
 export default App;

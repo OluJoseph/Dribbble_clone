@@ -10,17 +10,18 @@ const NavDropdownItemGroup = ({
   accentDropdownColor,
   svgRect,
 }) => {
+
   const [isHover, setIsHover] = useState(false);
 
   return (
     <div
-      className="w-full flex justify-between items-center gap-16 px-4 cursor-pointer py-4"
+      className="w-full flex justify-between items-center gap-10 px-4 cursor-pointer py-4 pl-10 pr-6"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="flex flex-row gap-4 items-center">
-        <div
-          className={`rounded-md ${accentDropdownColor} p-2 w-fit items-start`}
+        {svgIcon && <div
+          className={`rounded-md p-2 w-fit items-start ${isHover ? accentDropdownColor :'bg-slate-50'} transition-all`}
         >
           <Svg
             viewBox={"0 0 20 20"}
@@ -33,19 +34,19 @@ const NavDropdownItemGroup = ({
             strokeColor={accentColor}
             rect={svgRect}
           />
-        </div>
+        </div>}
         <div>
-          <h6 className="text-[14px] font-bold w-max mb-1 text-gray-800 tracking-tight">
+          <h6 className="text-[14px] w-max mb-1 text-gray tracking-tight">
             {header}
           </h6>
           <p className="text-[12px] w-max text-slate-500">{caption}</p>
         </div>
       </div>
-      <div
+      {svgIcon && <div
         className={
           isHover
-            ? "opacity-100 transition-all duration-300 translate-x-[3px]"
-            : "opacity-0 transition-all duration-300 translate-x-0"
+            ? "opacity-100 transition-all duration-300 translate-x-[3px] mr-8 ml-8"
+            : "opacity-0 transition-all duration-300 translate-x-0 mr-8 ml-8"
         }
       >
         <Svg
@@ -55,7 +56,7 @@ const NavDropdownItemGroup = ({
           svgClassNames={"site-nav-dropdown-arrow icon-12 fill-current"}
           drawingPath={rightArrow}
         />
-      </div>
+      </div>}
     </div>
   );
 };
