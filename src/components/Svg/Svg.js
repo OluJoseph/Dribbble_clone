@@ -7,6 +7,7 @@ const Svg = (props) => {
         width={props.width}
         height={props.height}
         viewBox={props.viewBox}
+        fill='currentColor'
       >
         <title>{props.title}</title>
 
@@ -34,12 +35,24 @@ const Svg = (props) => {
                 clipRule="evenodd"
                 d={d}
                 fill={props.color}
-                strokeWidth={!props.rect ? props.strokeWidth : null}
-                fillOpacity={!props.rect ? props.fillOpacity : null}
-                stroke={!props.rect ? props.strokeColor : null}
+                strokeWidth={props.strokeWidth}
+                fillOpacity={props.fillOpacity}
+                stroke={props.strokeColor}
               ></path>
             );
           })}
+
+        {props.circle && (
+          <circle
+            cx={props.circle.cx}
+            cy={props.circle.cy}
+            r={props.circle.r}
+            fill={props.color}
+            fillOpacity={props.fillOpacity}
+            stroke={props.strokeColor}
+            strokeWidth={props.strokeWidth}
+          ></circle>
+        )}
       </svg>
     </div>
   );

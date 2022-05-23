@@ -2,19 +2,18 @@ import MenuList from "../MenuList/MenuList";
 import NavDropdownItemGroup from "../NavDropdownItemGroup/NavDropdownItemGroup";
 import svgDimensions from "../svgDimensions";
 import Svg from "../Svg/Svg";
-import { rightArrow } from "../svgDimensions";
 import { useState } from "react";
 
 const DropDownMenu = (props) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="w-fit absolute">
+    <div className="w-fit absolute translate-x-[-50px] translate-y-[0px] pt-4">
       {(() => {
         switch (props.heading) {
           case "Inspiration":
             return (
-              <div className="flex flex-row rounded-lg shadow-2xl shadow-slate-200 m-8 bg-white ">
-                <div className="py-4">
+              <div className="flex flex-row rounded-lg myShadow bg-white py-4">
+                <div className="">
                   <ul className="border-b-2 pb-4 border-slate-100">
                     <li>
                       <NavDropdownItemGroup
@@ -23,6 +22,8 @@ const DropDownMenu = (props) => {
                         accentColor={"#724e91"}
                         svgIcon={svgDimensions.window}
                         accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
                       />
                     </li>
                     <li>
@@ -32,6 +33,8 @@ const DropDownMenu = (props) => {
                         accentColor={"#e54f6d"}
                         svgIcon={svgDimensions.heart}
                         accentDropdownColor={"bg-red-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
                       />
                     </li>
                     <li>
@@ -39,9 +42,10 @@ const DropDownMenu = (props) => {
                         header={"Playoffs"}
                         caption={"Work designers are riffing on"}
                         accentColor={"#74c4ba"}
-                        svgIcon={svgDimensions.stackRear}
-                        svgRect={svgDimensions.stackFront}
+                        svgIcon={svgDimensions.stack}
                         accentDropdownColor={"bg-green-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
                       />
                     </li>
                     <li>
@@ -49,9 +53,10 @@ const DropDownMenu = (props) => {
                         header={"Blog"}
                         caption={"Interviews, tutorials, and more"}
                         accentColor={"#f8c630"}
-                        svgIcon={svgDimensions.documentRear}
-                        svgRect={svgDimensions.documentFront}
+                        svgIcon={svgDimensions.document}
                         accentDropdownColor={"bg-yellow-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
                       />
                     </li>
                   </ul>
@@ -81,7 +86,7 @@ const DropDownMenu = (props) => {
                           svgClassNames={
                             "site-nav-dropdown-arrow icon-12 fill-current"
                           }
-                          drawingPath={rightArrow}
+                          drawingPath={svgDimensions.rightArrow.paths}
                         />
                       </div>
                       <img
@@ -114,9 +119,272 @@ const DropDownMenu = (props) => {
             );
           case "Find Work":
             return (
-               <div>
-                  okay
-               </div>
+              <div className="flex flex-row rounded-lg myShadow bg-white ">
+                <div className="py-4">
+                  <ul className="pb-4">
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Job Board"}
+                        caption={"Find your dream design job"}
+                        accentColor={"#724e91"}
+                        svgIcon={svgDimensions.windowIrregular}
+                        accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Freelance Projects"}
+                        caption={"An exclusive list for contract work"}
+                        accentColor={"#e54f6d"}
+                        svgIcon={svgDimensions.teaCup}
+                        accentDropdownColor={"bg-red-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Want freelance design projects?"}
+                        caption={"Get new leads in your inbox everyday"}
+                        accentColor={"#74c4ba"}
+                        svgIcon={svgDimensions.message}
+                        accentDropdownColor={"bg-green-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Personalize your profile with video"}
+                        caption={"Introduce yourself to new clients with Pitch"}
+                        accentColor={"#f8c630"}
+                        svgIcon={svgDimensions.profile}
+                        accentDropdownColor={"bg-yellow-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            );
+          case "Learn Design":
+            return (
+              <div className="flex flex-row rounded-lg myShadow bg-white ">
+                <div className="py-4">
+                  <ul className="pb-4">
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Certified Product Design Course"}
+                        caption={"Learn product design in just 12 weeks"}
+                        accentColor={"#724e91"}
+                        svgIcon={svgDimensions.pencilAndRuler}
+                        accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Browse our courses & workshops"}
+                        caption={
+                          "Level up your skills with our interactive courses and workshops..."
+                        }
+                        accentColor={"#f8c630"}
+                        svgIcon={svgDimensions.video}
+                        accentDropdownColor={"bg-yellow-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            );
+          case "Go Pro":
+            return (
+              <div className="flex flex-row rounded-lg myShadow bg-white ">
+                <div className="py-4">
+                  <ul className="pb-4">
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"For Designers"}
+                        caption={"Portfolio creation made easy"}
+                        accentColor={"#724e91"}
+                        svgIcon={svgDimensions.pen}
+                        accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"For Freelancers"}
+                        caption={"Fresh leads in your inbox everyday"}
+                        accentColor={"#e54f6d"}
+                        svgIcon={svgDimensions.toolCup}
+                        accentDropdownColor={"bg-red-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"For Teams"}
+                        caption={"Build your team's pipeline or profile"}
+                        accentColor={"#74c4ba"}
+                        svgIcon={svgDimensions.team}
+                        accentDropdownColor={"bg-green-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            );
+          case "Marketplace":
+            return (
+              <div className="flex flex-row rounded-lg myShadow bg-white ">
+                <div className="py-4">
+                  <ul className="pb-4">
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Discover"}
+                        caption={"A marketplace of digital assets"}
+                        accentColor={"#724e91"}
+                        svgIcon={svgDimensions.windowDiscover}
+                        accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Graphics"}
+                        caption={"Icons, Illustrations, Patterns, Textures..."}
+                        accentColor={"#e54f6d"}
+                        svgIcon={svgDimensions.graphics}
+                        accentDropdownColor={"bg-red-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Fonts"}
+                        caption={"Display, Script, Sans Serif, Serif..."}
+                        accentColor={"#74c4ba"}
+                        svgIcon={svgDimensions.fonts}
+                        accentDropdownColor={"bg-green-50"}
+                        iconStrokeWidth={"0.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Templates"}
+                        caption={"Mock Ups, Social Media, Presentations..."}
+                        accentColor={"#f8c630"}
+                        svgIcon={svgDimensions.templates}
+                        accentDropdownColor={"bg-yellow-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"3D"}
+                        caption={"Characters, Objects, Textures..."}
+                        accentColor={"#724e91"}
+                        svgIcon={svgDimensions.cube}
+                        accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Themes"}
+                        caption={"Wordpress, Shopify, Bootstrap, HTML5..."}
+                        accentColor={"#e54f6d"}
+                        svgIcon={svgDimensions.themes}
+                        accentDropdownColor={"bg-red-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li className="flex flex-col items-center">
+                      <NavDropdownItemGroup
+                        header={"Add Ons"}
+                        caption={"Procreate, Affinity, Photoshop, Indesign..."}
+                        accentColor={"#74c4ba"}
+                        svgIcon={svgDimensions.windowAddOn}
+                        accentDropdownColor={"bg-green-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                      <hr className="w-96 my-3" />
+                    </li>
+                    <NavDropdownItemGroup
+                      header={"Open a Shop"}
+                      caption={"Earn money doing what you love"}
+                      accentColor={"#74c4ba"}
+                      svgIcon={svgDimensions.tag}
+                      accentDropdownColor={"bg-green-50"}
+                      iconFillOpacity={"0.2"}
+                      iconStrokeWidth={"1.5"}
+                    />
+                  </ul>
+                </div>
+              </div>
+            );
+          case "Hire Designers":
+            return (
+              <div className="flex flex-row rounded-lg myShadow bg-white ">
+                <div className="py-4">
+                  <ul className="pb-4">
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Designer Search"}
+                        caption={"Find, contact, and hire designers"}
+                        accentColor={"#724e91"}
+                        svgIcon={svgDimensions.find}
+                        accentDropdownColor={"bg-purple-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"List my Job Opening"}
+                        caption={"The #1 job board for creatives"}
+                        accentColor={"#e54f6d"}
+                        svgIcon={svgDimensions.plus}
+                        accentDropdownColor={"bg-red-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                        iconViewBox={'0 0 14 14'}
+                        iconWidth={'14'}
+                      />
+                    </li>
+                    <li>
+                      <NavDropdownItemGroup
+                        header={"Post a Freelance Project"}
+                        caption={"Board for freelance & contract work"}
+                        accentColor={"#74c4ba"}
+                        svgIcon={svgDimensions.plus}
+                        accentDropdownColor={"bg-green-50"}
+                        iconFillOpacity={"0.2"}
+                        iconStrokeWidth={"1.5"}
+                        iconViewBox={'0 0 14 14'}
+                        iconWidth={'14'}
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
             );
           default:
             return null;

@@ -13,7 +13,7 @@ const Navigation = (props) => {
           color={"black"}
           width={"76"}
           viewBox={"0 0 76 19"}
-          drawingPath={dribbble}
+          drawingPath={dribbble.paths}
         />
 
         <ul className="flex flex-row pl-8 gap-8 items-center">
@@ -32,7 +32,7 @@ const Navigation = (props) => {
             width={"16"}
             viewBox={"0 0 16 16"}
             svgClassNames={"icon icon-18 fill-current"}
-            drawingPath={search}
+            drawingPath={search.paths}
           />
         </a>
         <a href="#0" className="self-center">
