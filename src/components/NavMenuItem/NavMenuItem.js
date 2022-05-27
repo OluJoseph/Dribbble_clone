@@ -16,7 +16,7 @@ const NavMenuItem = (props) => {
 
   return (
     <li onMouseLeave={handleCollapsePopup}>
-      <p className="hover:text-gray-800 cursor-pointer text-sm font-[550] text-slate-500" onMouseEnter={handleDisplayPopup} >
+      <p className="hover:text-gray-800 cursor-pointer text-sm font-[550] text-slate-500 w-max" onMouseEnter={handleDisplayPopup} >
         {props.navItem}
       </p>
       {menuItemHover && <DropDownMenu heading={popupMenu} />}

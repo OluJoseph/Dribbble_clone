@@ -1,56 +1,69 @@
-const Svg = (props) => {
+const Svg = ({
+  drawingPath,
+  svgClassNames,
+  width,
+  height,
+  viewBox,
+  title,
+  rect,
+  fillOpacity,
+  color,
+  strokeColor,
+  strokeWidth,
+  pathClassNames,
+  circle,
+}) => {
   return (
     <div>
       <svg
-        className={props.svgClassNames}
+        className={svgClassNames}
         xmlns="http://www.w3.org/2000/svg"
-        width={props.width}
-        height={props.height}
-        viewBox={props.viewBox}
-        fill='currentColor'
+        width={width}
+        height={height}
+        viewBox={viewBox}
       >
-        <title>{props.title}</title>
+        <title>{title}</title>
 
-        {props.rect && (
+        {rect && (
           <rect
-            x={props.rect.x}
-            y={props.rect.y}
-            width={props.rect.width}
-            height={props.rect.height}
-            rx={props.rect.rx}
-            fillOpacity={props.fillOpacity}
-            fill={props.color}
-            stroke={props.strokeColor}
-            strokeWidth={props.strokeWidth}
+            x={rect.x}
+            y={rect.y}
+            width={rect.width}
+            height={rect.height}
+            rx={rect.rx}
+            fillOpacity={fillOpacity}
+            fill={color}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
           ></rect>
         )}
 
-        {props.drawingPath &&
-          props.drawingPath.map((d, i) => {
+        {drawingPath &&
+          drawingPath.map((d, i) => {
             return (
               <path
                 key={i}
-                className={props.pathClassNames}
+                className={pathClassNames}
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d={d}
-                fill={props.color}
-                strokeWidth={props.strokeWidth}
-                fillOpacity={props.fillOpacity}
-                stroke={props.strokeColor}
+                fill={color}
+                strokeWidth={strokeWidth}
+                fillOpacity={fillOpacity}
+                stroke={strokeColor}
               ></path>
             );
           })}
 
-        {props.circle && (
+        {circle && (
           <circle
-            cx={props.circle.cx}
-            cy={props.circle.cy}
-            r={props.circle.r}
-            fill={props.color}
-            fillOpacity={props.fillOpacity}
-            stroke={props.strokeColor}
-            strokeWidth={props.strokeWidth}
+            cx={circle.cx}
+            cy={circle.cy}
+            r={circle.r}
+            fill={color}
+            fillOpacity={fillOpacity}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
           ></circle>
         )}
       </svg>
