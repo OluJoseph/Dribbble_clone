@@ -18,7 +18,7 @@ const Navigation = (props) => {
 
   return (
     <div className="pl-6 py-5 pr-10 flex justify-between items-center">
-      <div className="flex-1 flex flex-row lg:flex-1 lg:justify-start justify-between lg:gap-5 items-center">
+      <div className="flex-1 flex flex-row lg:flex-1 lg:justify-start justify-between lg:gap-8 items-center">
         <div className="w-fit order-last lg:order-first translate-x-[40px] lg:translate-x-[0]">
           <Svg
             pathClassNames={"hover:fill-slate-600"}
