@@ -7,13 +7,13 @@ import { useState } from "react";
 const DropDownMenu = (props) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="w-fit absolute translate-x-[-50px] translate-y-[0px] pt-4">
+    <div className="w-fit absolute translate-x-[-50px] translate-y-[0px] pt-4 ">
       {(() => {
         switch (props.heading) {
           case "Inspiration":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white py-4">
-                <div className="">
+              <div className="flex flex-row rounded-lg myShadow bg-white ">
+                <div className="py-4  w-[450px] max-w-[450px]">
                   <ul className="border-b-2 pb-4 border-slate-100">
                     <li>
                       <NavDropdownItemGroup
@@ -63,7 +63,7 @@ const DropDownMenu = (props) => {
                   <div
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
-                    className="flex items-center pl-10 pr-14 gap-6 content-center pt-3"
+                    className="flex items-center pl-10 pr-14 gap-6 content-center pt-3 cursor-pointer"
                   >
                     <div className="">
                       <h6 className="text-[14px] w-max mb-1 text-graytracking-tight">
@@ -100,7 +100,7 @@ const DropDownMenu = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="p-8 px-9 bg-slate-100 w-full rounded-r-lg">
+                <div className="p-8 px-9 bg-slate-100 rounded-r-lg">
                   <MenuList
                     title={"Browse Categories"}
                     links={[
@@ -119,8 +119,8 @@ const DropDownMenu = (props) => {
             );
           case "Find Work":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white ">
-                <div className="py-4">
+              <div className="flex flex-row rounded-lg myShadow bg-white w-[450px] max-w-[450px]">
+                <div className="py-4 w-full">
                   <ul className="pb-4">
                     <li>
                       <NavDropdownItemGroup
@@ -172,9 +172,9 @@ const DropDownMenu = (props) => {
             );
           case "Learn Design":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white ">
-                <div className="py-4">
-                  <ul className="pb-4">
+              <div className="flex flex-row rounded-lg myShadow bg-white  w-[450px] max-w-[450px]">
+                <div className="py-4 w-full">
+                  <ul className="pb-4 w-full">
                     <li>
                       <NavDropdownItemGroup
                         header={"Certified Product Design Course"}
@@ -205,8 +205,8 @@ const DropDownMenu = (props) => {
             );
           case "Go Pro":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white ">
-                <div className="py-4">
+              <div className="flex flex-row rounded-lg myShadow bg-white  w-[450px] max-w-[450px]">
+                <div className="py-4 w-full">
                   <ul className="pb-4">
                     <li>
                       <NavDropdownItemGroup
@@ -247,8 +247,8 @@ const DropDownMenu = (props) => {
             );
           case "Marketplace":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white ">
-                <div className="py-4">
+              <div className="flex flex-row rounded-lg myShadow bg-white w-[450px] max-w-[450px]">
+                <div className="py-4 w-full">
                   <ul className="pb-4">
                     <li>
                       <NavDropdownItemGroup
@@ -335,6 +335,9 @@ const DropDownMenu = (props) => {
                       accentDropdownColor={"bg-green-50"}
                       iconFillOpacity={"0.2"}
                       iconStrokeWidth={"1.5"}
+                      iconViewBox={'0 0 26 24'}
+                      iconWidth={'24'}
+                      iconHeight={'24'}
                     />
                   </ul>
                 </div>
@@ -342,8 +345,8 @@ const DropDownMenu = (props) => {
             );
           case "Hire Designers":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white ">
-                <div className="py-4">
+              <div className="flex flex-row rounded-lg myShadow bg-white  w-[450px] max-w-[450px]">
+                <div className="py-4 w-full">
                   <ul className="pb-4">
                     <li>
                       <NavDropdownItemGroup

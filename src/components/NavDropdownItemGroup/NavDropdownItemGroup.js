@@ -17,7 +17,7 @@ const NavDropdownItemGroup = ({
   const [isHover, setIsHover] = useState(false);
   return (
     <div
-      className="w-full flex justify-between items-center gap-10 px-4 cursor-pointer py-4 pl-10 pr-6"
+      className="w-full flex justify-between items-center gap-10 cursor-pointer py-3 pl-10 pr-6 w-full"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
@@ -47,7 +47,7 @@ const NavDropdownItemGroup = ({
           <h6 className="text-[14px] w-max mb-1 text-gray-800 font-bold tracking-tight">
             {header}
           </h6>
-          <p className="text-[12px] w-max text-slate-500">{caption}</p>
+          <p className="text-[12px] w-full text-slate-500">{caption}</p>
         </div>
       </div>
 
