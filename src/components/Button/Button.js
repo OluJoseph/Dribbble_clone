@@ -9,7 +9,7 @@ const Button = (props) => {
         " py-2.5 rounded-lg font-bold text-sm"
       }
     >
-      {props.title}
+      <p className="w-max">{props.title}</p>
     </button>
   );
 };
