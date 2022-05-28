@@ -12,7 +12,7 @@ const NavDropdownItemGroup = ({
   iconFillOpacity,
   iconViewBox,
   iconWidth,
-  iconHeight
+  iconHeight,
 }) => {
   const [isHover, setIsHover] = useState(false);
   return (
@@ -26,12 +26,12 @@ const NavDropdownItemGroup = ({
           <div
             className={`rounded-md p-2 w-[36px] h-[36px] items-start ${
               isHover ? accentDropdownColor : "bg-slate-50"
-            } transition-all`}
+            } transition-all hidden lg:block`}
           >
             <Svg
               viewBox={iconViewBox ? iconViewBox : "0 0 20 22"}
               width={iconWidth ? iconWidth : "20"}
-              height={iconHeight ? iconHeight : '22'}
+              height={iconHeight ? iconHeight : "22"}
               color={accentColor}
               drawingPath={svgIcon.paths}
               strokeWidth={iconStrokeWidth}
@@ -44,20 +44,18 @@ const NavDropdownItemGroup = ({
           </div>
         )}
         <div>
-          <h6 className="text-[14px] w-max mb-1 text-gray-800 font-bold tracking-tight">
+          <h6 className="text-[17px] lg:text-[14px] w-max mb-1 text-gray-500 lg:text-gray-800 font-regular lg:font-bold tracking-tight">
             {header}
           </h6>
-          <p className="text-[12px] w-full text-slate-500">{caption}</p>
+          <p className="text-[12px] w-full text-slate-500 hidden lg:block">
+            {caption}
+          </p>
         </div>
       </div>
 
       {svgIcon.paths && (
         <div
-          className={
-            isHover
-              ? "opacity-100 transition-all duration-300 translate-x-[3px] mr-8 ml-8"
-              : "opacity-0 transition-all duration-300 translate-x-0 mr-8 ml-8"
-          }
+          className={`hidden lg:block ${ isHover ? "opacity-100 transition-all duration-300 translate-x-[3px] mr-8 ml-8": "opacity-0 transition-all duration-300 translate-x-0 mr-8 ml-8" } `}
         >
           <Svg
             viewBox={"0 0 12 12"}

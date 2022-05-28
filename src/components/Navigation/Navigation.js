@@ -71,7 +71,7 @@ const Navigation = (props) => {
         </button>
 
         <ul
-          className={`overflow-auto lg:grid flex-col lg:grid-flow-col lg:items-center lg:static bg-white lg:bg-transparent h-full w-[100vw] lg:w-max top-[64px] left-0 flex-initial ${
+          className={`overflow-scroll lg:overflow-hidden lg:grid flex-col lg:grid-flow-col lg:items-center lg:static bg-white lg:bg-transparent h-full w-[100vw] lg:w-max top-[64px] left-0 flex-initial ${
             !menuClick ? "hidden" : "fixed"
           } border-t-2 lg:border-t-0 border-slate-100 pt-4 lg:pt-0 px-6 lg:px-0 pb-20 lg:pb-0`}
         >
