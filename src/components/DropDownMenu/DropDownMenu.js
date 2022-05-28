@@ -4,12 +4,12 @@ import svgDimensions from "../svgDimensions";
 import Svg from "../Svg/Svg";
 import { useState } from "react";
 
-const DropDownMenu = (props) => {
+const DropDownMenu = ({ heading, winWidth }) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="w-fit absolute translate-x-[-50px] translate-y-[0px] pt-4 ">
+    <div className="w-fit lg:absolute lg:translate-x-[-50px] lg:translate-y-[0px] pt-4 ">
       {(() => {
-        switch (props.heading) {
+        switch (heading) {
           case "Inspiration":
             return (
               <div className="flex flex-row rounded-lg myShadow bg-white ">
@@ -100,7 +100,7 @@ const DropDownMenu = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="p-8 px-9 bg-slate-100 rounded-r-lg">
+                <div className="p-8 px-9 bg-slate-100 rounded-r-lg lg:block hidden">
                   <MenuList
                     title={"Browse Categories"}
                     links={[
@@ -335,9 +335,9 @@ const DropDownMenu = (props) => {
                       accentDropdownColor={"bg-green-50"}
                       iconFillOpacity={"0.2"}
                       iconStrokeWidth={"1.5"}
-                      iconViewBox={'0 0 26 24'}
-                      iconWidth={'24'}
-                      iconHeight={'24'}
+                      iconViewBox={"0 0 26 24"}
+                      iconWidth={"24"}
+                      iconHeight={"24"}
                     />
                   </ul>
                 </div>
@@ -368,8 +368,8 @@ const DropDownMenu = (props) => {
                         accentDropdownColor={"bg-red-50"}
                         iconFillOpacity={"0.2"}
                         iconStrokeWidth={"1.5"}
-                        iconViewBox={'0 0 14 14'}
-                        iconWidth={'14'}
+                        iconViewBox={"0 0 14 14"}
+                        iconWidth={"14"}
                       />
                     </li>
                     <li>
@@ -381,8 +381,8 @@ const DropDownMenu = (props) => {
                         accentDropdownColor={"bg-green-50"}
                         iconFillOpacity={"0.2"}
                         iconStrokeWidth={"1.5"}
-                        iconViewBox={'0 0 14 14'}
-                        iconWidth={'14'}
+                        iconViewBox={"0 0 14 14"}
+                        iconWidth={"14"}
                       />
                     </li>
                   </ul>
