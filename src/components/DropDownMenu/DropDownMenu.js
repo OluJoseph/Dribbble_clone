@@ -7,14 +7,14 @@ import { useState } from "react";
 const DropDownMenu = ({ heading, winWidth }) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="w-fit lg:absolute lg:translate-x-[-50px] lg:translate-y-[0px] pt-4 ">
+    <div className="border-l-2 lg:border-0 w-fit lg:absolute lg:translate-x-[-50px] lg:translate-y-[0px] lg:pt-4 my-4 lg:my-0">
       {(() => {
         switch (heading) {
           case "Inspiration":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white ">
-                <div className="py-4  w-[450px] max-w-[450px]">
-                  <ul className="border-b-2 pb-4 border-slate-100">
+              <div className="flex flex-row rounded-lg dropDownShadow bg-transparent lg:bg-white ">
+                <div className="lg:py-4  w-[450px] max-w-[450px]">
+                  <ul className="lg:border-b-2 lg:pb-4 border-slate-100">
                     <li>
                       <NavDropdownItemGroup
                         header={"Explore Design Work"}
@@ -63,7 +63,7 @@ const DropDownMenu = ({ heading, winWidth }) => {
                   <div
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
-                    className="flex items-center pl-10 pr-14 gap-6 content-center pt-3 cursor-pointer"
+                    className="lg:flex items-center pl-10 pr-14 gap-6 content-center pt-3 cursor-pointer hidden"
                   >
                     <div className="">
                       <h6 className="text-[14px] w-max mb-1 text-graytracking-tight">
@@ -119,9 +119,9 @@ const DropDownMenu = ({ heading, winWidth }) => {
             );
           case "Find Work":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white w-[450px] max-w-[450px]">
-                <div className="py-4 w-full">
-                  <ul className="pb-4">
+              <div className="flex flex-row rounded-lg dropDownShadow bg-white w-[450px] max-w-[450px]">
+                <div className="lg:py-4 w-full">
+                  <ul className="lg:pb-4">
                     <li>
                       <NavDropdownItemGroup
                         header={"Job Board"}
@@ -172,9 +172,9 @@ const DropDownMenu = ({ heading, winWidth }) => {
             );
           case "Learn Design":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white  w-[450px] max-w-[450px]">
-                <div className="py-4 w-full">
-                  <ul className="pb-4 w-full">
+              <div className="flex flex-row rounded-lg dropDownShadow bg-white  w-[450px] max-w-[450px]">
+                <div className="lg:py-4 w-full">
+                  <ul className="lg:pb-4 w-full">
                     <li>
                       <NavDropdownItemGroup
                         header={"Certified Product Design Course"}
@@ -205,9 +205,9 @@ const DropDownMenu = ({ heading, winWidth }) => {
             );
           case "Go Pro":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white  w-[450px] max-w-[450px]">
-                <div className="py-4 w-full">
-                  <ul className="pb-4">
+              <div className="flex flex-row rounded-lg dropDownShadow bg-white  w-[450px] max-w-[450px]">
+                <div className="lg:py-4 w-full">
+                  <ul className="lg:pb-4">
                     <li>
                       <NavDropdownItemGroup
                         header={"For Designers"}
@@ -247,9 +247,9 @@ const DropDownMenu = ({ heading, winWidth }) => {
             );
           case "Marketplace":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white w-[450px] max-w-[450px]">
-                <div className="py-4 w-full">
-                  <ul className="pb-4">
+              <div className="flex flex-row rounded-lg dropDownShadow bg-white w-[450px] max-w-[450px]">
+                <div className="lg:py-4 w-full">
+                  <ul className="lg:pb-4">
                     <li>
                       <NavDropdownItemGroup
                         header={"Discover"}
@@ -325,7 +325,7 @@ const DropDownMenu = ({ heading, winWidth }) => {
                         iconFillOpacity={"0.2"}
                         iconStrokeWidth={"1.5"}
                       />
-                      <hr className="w-96 my-3" />
+                      <hr className="w-96 my-3 hidden lg:block" />
                     </li>
                     <NavDropdownItemGroup
                       header={"Open a Shop"}
@@ -345,9 +345,9 @@ const DropDownMenu = ({ heading, winWidth }) => {
             );
           case "Hire Designers":
             return (
-              <div className="flex flex-row rounded-lg myShadow bg-white  w-[450px] max-w-[450px]">
-                <div className="py-4 w-full">
-                  <ul className="pb-4">
+              <div className="flex flex-row rounded-lg dropDownShadow bg-white  w-[450px] max-w-[450px]">
+                <div className="lg:py-4 w-full">
+                  <ul className="lg:pb-4">
                     <li>
                       <NavDropdownItemGroup
                         header={"Designer Search"}
