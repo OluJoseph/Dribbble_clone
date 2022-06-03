@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import Svg from "../Svg/Svg";
 import { expand } from "../svgDimensions";
@@ -9,10 +9,10 @@ const NavMenuItem = ({ navItem, winWidth }) => {
   const [popupMenu, setPopupMenu] = useState("");
 
   const handleDisplayPopup = (e) => {
-    const lg = winWidth > 1024;
-    lg && setMenuItemHover(true);
-    !lg && isMenuItemClicked(!menuItemClick);
-    setPopupMenu(!lg ? e.currentTarget.children[0].textContent : e.target.textContent);
+    const largeScreen = winWidth > 1024;
+    largeScreen && setMenuItemHover(true);
+    !largeScreen && isMenuItemClicked(!menuItemClick);
+    setPopupMenu(!largeScreen ? e.currentTarget.children[0].textContent : e.target.textContent);
   };
 
   const handleCollapsePopup = (e) => {
@@ -20,7 +20,7 @@ const NavMenuItem = ({ navItem, winWidth }) => {
   };
 
   return winWidth > 1024 ? (
-    <li onMouseLeave={handleCollapsePopup} className="py-2 lg:py-0 ">
+    <li onMouseLeave={handleCollapsePopup} className="py-2 largeScreen:py-0 ">
       <p
         className="hover:text-gray-800 cursor-pointer tracking-tight text-[14px] font-[550] text-slate-500 w-max px-3"
         onMouseEnter={handleDisplayPopup}
