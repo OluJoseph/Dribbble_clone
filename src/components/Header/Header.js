@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 
 const Header = (props) => {
     return (
-        <div className='items-center text-center bg-[#E9ECFF] grid grid-rows-1 md:grid-cols-2 py-10 px-[20px] md:px-[32px] xl:px-[72px] h-fit'>
+        <div className='items-center text-center bg-[#E9ECFF] grid grid-rows-1 md:grid-cols-2 py-10 px-[20px] md:px-[32px] xl:px-[72px] h-fit w-full'>
             <div className=' xl:pr-28 md:text-left '>
                 <h1 className="text-3xl md:text-3xl xl:text-5xl text-gray-900 font-[700] py-2 tracking-tight ">Discover the world's top designers & creatives</h1>
                 <p className="py-2 mb-2 leading-relaxed">Dribbble is the leading destination to find & showcase creative work and home to the world's

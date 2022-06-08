@@ -11,7 +11,7 @@ import {
 
 const Footer = (props) => {
   return (
-    <div className="px-[20px] md:px-[32px] xl:px-[72px] pt-[72px]">
+    <footer className="px-[20px] md:px-[32px] xl:px-[72px] pt-[72px] w-full">
       <div className="flex flex-wrap flex-col lg:flex-row lg:flex-nowrap gap-[40px] border-b-2 pb-16 border-slate-100">
         <div className=" w-[256px] flex-initial">
           <Svg
@@ -172,7 +172,7 @@ const Footer = (props) => {
           ></img>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
